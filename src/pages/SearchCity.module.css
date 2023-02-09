@@ -1,0 +1,40 @@
+.city {
+    width: 20rem;
+    margin: 1rem auto;
+    padding: 1rem;
+    background-color: skyblue;
+    border-radius: 10px;
+}
+
+.city label {
+    color: black;
+}
+
+.inputRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+    justify-content: center;
+}
+
+
+.buttons {
+
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.degree {
+
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}

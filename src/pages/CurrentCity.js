@@ -37,9 +37,7 @@ const CurrentCity = () => {
     const unit=tempUnit.current.value;
     try {
       const response = await getCurrWeather(lon, lat,unit);
-    //   if (!response.ok) {
-    //     throw new Error("Something went wrong");
-    //   }
+    
         if(response===undefined){
             throw new Error("Something went wrong");
         }
@@ -56,10 +54,6 @@ const CurrentCity = () => {
         windSpeed:response.wind.speed
 
       });
-      console.log(response)
-    console.log(weather)
-
-
 
     } catch (error) {
       setError(error.message);
@@ -80,29 +74,21 @@ const CurrentCity = () => {
 
   return (
     <>
-      <h2>this is current city page</h2>
       {coordinates}
       <br></br>
-      <select style={{
-                width:"5rem",
-                display:"flex",
-                margin:'0 auto',
-                alignItems:"center"
-                }}
+     <div className={classes.inputRow}>
+      <select 
+      className={classes.degree}
          name="unit" id="tempUnit" ref={tempUnit} defaultValue='metric'>
         <option value="metric">Celsius</option>
         <option value="imperial">Fahrenheit</option>
         </select>
         
-      <button style={{
-         width:"5rem",
-        display:"flex",
-        margin:'0 auto',
-        alignItems:"center"
-       }} 
+      <button className={classes.buttons}
         type="button" disabled={!gotCord} onClick={getCurrentWeather}>
-        Get Weather Update
+        Show weather
       </button>
+      </div> 
       {weather.weatherType!='' && !error && (
         <Weather weather={weather}></Weather>
         )

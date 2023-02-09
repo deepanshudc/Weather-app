@@ -1,17 +1,44 @@
-.coordinates{
-    margin: 0rem auto;
+.coordinates {
+    margin: 1rem auto;
     padding: 0.2rem 0.5rem;
-    border-radius:  10px;
+    border-radius: 10px;
     color: black;
-    display:flex;
+    display: flex;
     flex-direction: row;
     gap: 2rem;
     justify-content: center;
     background-color: skyblue;
-   
 
 }
 
-.coordinates p{
+.coordinates p {
     font-size: 1.2rem;
+}
+
+.buttons {
+
+    display: flex;
+    margin: 1rem;
+    padding: 1rem;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+}
+
+
+.degree {
+
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    background-color: black;
+    color: white;
+}
+
+.inputRow {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    width: auto;
+    justify-content: center;
 }

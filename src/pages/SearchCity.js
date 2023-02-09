@@ -58,37 +58,26 @@ const SearchCity=()=>{
 
     return(
          <>
-         <h1>this is search city page</h1>
          <form onSubmit={submitHandler}>
-            <label type='cityName'>Enter City:</label>
-            <input id='cityName' type='text' ref={cityname} />
+         < div  className={classes.city}>
+            <label type='cityName'>Enter City : </label>
+           <input  id='cityName' type='text' ref={cityname} />
+          </div>
             <br></br>
-            <select name="unit" id="tempUnit" ref={tempUnit} defaultValue='metric'>
+            <div className={classes.inputRow}>
+                <select
+            className={classes.degree}
+             name="unit" id="tempUnit" ref={tempUnit} defaultValue='metric'>
             <option value="metric">Celsius</option>
             <option value="imperial">Fahrenheit</option>
             </select>
-            <button style={{
-                width:"5rem",
-                display:"flex",
-                margin:'0 auto',
-                alignItems:"center"
-                }}
+            <button className={classes.buttons}
                 type="submit">Show Weather
             </button>
+            </div>
          </form>
          {error&&<p>{error}</p>}
          {weather.weatherType!='' &&!error &&(
-            // <>
-            //  <h2>Weather:</h2>
-            //  <ul style={{listStyleType: "none"}}>
-            //     <h2>{weather.placeName}</h2>
-            //    <li>Weather Type:{weather.weatherType}</li>
-            //    <li>Weather desc:{weather.desc}</li>
-            //    <li>temp :{weather.temp} {tempUnit.current.value==='imperial'?'\u00B0'+"F":'\u00B0'+"C"}</li>
-            //    <li>temp min:{weather.min_temp}</li>
-            //     <li>temp max:{weather.max_temp}</li>
-            //     </ul>
-            // </> 
             <Weather weather={weather}></Weather>
              )
             }
