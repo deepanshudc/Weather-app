@@ -1,0 +1,8 @@
+.main{
+    height: 150vh;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    background-color: rgb(29, 62, 92);
+    color: aliceblue;
+}

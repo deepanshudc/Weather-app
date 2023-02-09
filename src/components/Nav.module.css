@@ -1,0 +1,28 @@
+.nav{
+    margin: 0.5rem auto;
+    padding: 0rem 1rem;
+    background-color :black;
+    border-radius:  15px;
+
+}
+
+.nav ul{
+list-style: none;
+display: flex;
+padding: 0.5rem 0.5rem;
+gap: 2rem;
+justify-content: center;
+}
+
+.nav a{
+    text-decoration: none;
+    color:azure
+}
+
+.nav a:hover,
+.nav a:active,
+.nav a.active{
+    /* padding-bottom: 0.25rem;
+    border-bottom: 4px solid rgb(177, 191, 204); */
+    color: rgb(182, 182, 228);
+} 

@@ -1,0 +1,17 @@
+.coordinates{
+    margin: 0rem auto;
+    padding: 0.2rem 0.5rem;
+    border-radius:  10px;
+    color: black;
+    display:flex;
+    flex-direction: row;
+    gap: 2rem;
+    justify-content: center;
+    background-color: skyblue;
+   
+
+}
+
+.coordinates p{
+    font-size: 1.2rem;
+}
