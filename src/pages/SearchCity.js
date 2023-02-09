@@ -1,4 +1,5 @@
 import { useRef,useState } from "react";
+import Weather from "../components/Weather";
 import { getCityWeather } from "../api";
 import classes from './SearchCity.module.css'
 const SearchCity=()=>{
@@ -10,7 +11,10 @@ const SearchCity=()=>{
         temp: "",
         min_temp: "",
         max_temp: "",
-        placeName:''
+        placeName:'',
+        units:'',
+        weatherIcon:'',
+        windSpeed:''
     });
 
     const cityname=useRef()
@@ -35,7 +39,11 @@ const SearchCity=()=>{
                 temp: response.main.temp,
                 min_temp: response.main.temp_min,
                 max_temp: response.main.temp_max,
-                placeName:response.name
+                placeName:response.name,
+                units:unit,
+                weatherIcon:response.weather[0].icon,
+                windSpeed:response.wind.speed
+        
             })
             setError(undefined)
             console.log(weather)
@@ -70,17 +78,18 @@ const SearchCity=()=>{
          </form>
          {error&&<p>{error}</p>}
          {weather.weatherType!='' &&!error &&(
-            <>
-             <h2>Weather:</h2>
-             <ul style={{listStyleType: "none"}}>
-                <h2>{weather.placeName}</h2>
-               <li>Weather Type:{weather.weatherType}</li>
-               <li>Weather desc:{weather.desc}</li>
-               <li>temp :{weather.temp} {tempUnit.current.value==='imperial'?'\u00B0'+"F":'\u00B0'+"C"}</li>
-               <li>temp min:{weather.min_temp}</li>
-                <li>temp max:{weather.max_temp}</li>
-                </ul>
-            </> 
+            // <>
+            //  <h2>Weather:</h2>
+            //  <ul style={{listStyleType: "none"}}>
+            //     <h2>{weather.placeName}</h2>
+            //    <li>Weather Type:{weather.weatherType}</li>
+            //    <li>Weather desc:{weather.desc}</li>
+            //    <li>temp :{weather.temp} {tempUnit.current.value==='imperial'?'\u00B0'+"F":'\u00B0'+"C"}</li>
+            //    <li>temp min:{weather.min_temp}</li>
+            //     <li>temp max:{weather.max_temp}</li>
+            //     </ul>
+            // </> 
+            <Weather weather={weather}></Weather>
              )
             }
          </>
