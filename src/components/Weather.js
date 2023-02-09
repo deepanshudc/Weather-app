@@ -17,9 +17,9 @@ return (
             <h2>{props.weather.desc}</h2>
             </div>
             <div className={classes.row3}>
-            <li>Wind speed: {props.weather.windSpeed}</li>
-            <li>Temperature min: {props.weather.min_temp} {unitType}</li>
-            <li>Temperature max: {props.weather.max_temp} {unitType}</li>
+            <li> Wind speed: &nbsp; &nbsp; {props.weather.windSpeed} m/sec</li>
+            <li> Temperature min:  &nbsp; {props.weather.min_temp} {unitType}</li>
+            <li> Temperature max:  &nbsp; {props.weather.max_temp} {unitType}</li>
             </div>
         </ul>
     </div>
