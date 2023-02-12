@@ -3,6 +3,9 @@ This is a weather app used to fetch weather of current location as well as for t
 The weather data is fetched using API from Openweathermap.org.
 This is made as a personal project to showcase and for learning purposes.
 
+To see the deployed  webapp , try this:
+https://weather-app-1a5fd.web.app
+
 ## Available Scripts
 
 In the project directory, you can run:
