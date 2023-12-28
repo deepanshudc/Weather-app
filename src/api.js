@@ -1,4 +1,4 @@
-const API_KEY= process.env.REACT_APP_API_KEY_WEATHER
+const API_KEY= 43787cd95d052d4c8e35e1b99cab3e01
 
 export  async function getCurrWeather(lon,lat,unit){
 
